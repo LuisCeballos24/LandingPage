@@ -1,0 +1,179 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1C2545; /* Establece el color de fondo para toda la página */
+    color: #F8F9FA; /* Establece el color de texto predeterminado */
+}
+
+.container {
+    max-width: 1200px; /* Limita el ancho máximo de la página */
+    width: 100%;
+    padding: 20px; /* Agrega relleno para separar el contenido de los bordes */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #1C2545; /* Color de fondo */
+    color: #F8F9FA;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+}
+
+/* Ajusta el ancho del logotipo si es necesario */
+.navbar-logo {
+    font-size: 40px;
+    font-weight: 700;
+    /* Otros estilos para el logotipo */
+}
+
+/* Ajusta el ancho y el espacio entre los enlaces si es necesario */
+.navbar-links {
+    display: flex;
+    /* Otros estilos para los enlaces */
+}
+
+.navbar-link {
+    margin-right: 20px;
+    /* Otros estilos para los enlaces */
+}
+
+/* Estilos del banner */
+/* Estilos para el banner */
+.banner {
+    width: 100%; /* Ocupa todo el ancho de la página */
+    height: 100%;
+    position: relative;
+    background: rgba(236, 247, 247, 0.5); /* Cambia el valor alfa a 0.1 para hacerlo más transparente */
+    padding: 20px;
+}
+
+/* Estilos para el contenido del banner */
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-text {
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: center;
+}
+
+/* Estilos para la imagen en el banner */
+.banner-image img {
+    max-width: 50%; /* Ajusta el ancho de la imagen al 50% del banner */
+    height: auto;
+}
+/* Estilos para el texto en el banner */
+/* Estilos para el título en el banner */
+.banner-title {
+    font-size: 64px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px; /* Reduce el margen inferior del título */
+}
+
+/* Estilos para el subtítulo en el banner */
+.banner-subtitle {
+    font-size: 25px;
+    font-family: Inter;
+    font-weight: 400;
+    color: #6C757D;
+    margin-top: 10px;
+}
+
+/* Estilos para el botón "Hire Me" en el banner */
+.hire-button {
+    width: 115px;
+    height: 44px;
+    background: #212529;
+    color: #F8F9FA;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilos para pantallas pequeñas (por ejemplo, teléfonos móviles) */
+@media screen and (max-width: 768px) {
+    /* Modifica los estilos de la barra de navegación */
+    .navbar {
+        padding: 10px; /* Reduce el espaciado */
+    }
+
+    .navbar-logo {
+        font-size: 30px; /* Reduce el tamaño del logo */
+    }
+
+    .navbar-link {
+        font-size: 16px; /* Reduce el tamaño de los enlaces de navegación */
+        margin-right: 10px;
+    }
+
+    /* Modifica otros estilos según sea necesario para pantallas pequeñas */
+}
+
+/* Estilos de la sección "Acerca de mí" */
+.about {
+    background-color: rgba(237, 7, 183, 0.17);
+    padding: 100px 0;
+    text-align: center;
+}
+.about-button.view-cv-button {
+    background-color: #F8F9FA;
+    color: #212529;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid #212529;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+/* Estilos para los bloques de servicio */
+.service-block {
+    background: rgba(28, 37, 69, 0.17);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Establece el ancho máximo al 100% */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.service-block .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-block .banner-text {
+    flex: 1;
+}
+
+.service-block .banner-title {
+    font-size: 32px; /* Ajusta el tamaño del título */
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.service-block .banner-subtitle {
+    font-size: 16px; /* Ajusta el tamaño del subtítulo */
+    font-weight: 400;
+    color: #6C757D;
+    margin-top: 10px;
+}
