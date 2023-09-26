@@ -12,61 +12,160 @@
 
         <!-- Barra de navegación -->
         <div class="navbar">
-            <div class="navbar-logo">Daniel Lombana</div>
+            <a class="navbar-logo" href="#banner">Daniel Lombana</a>
             <div class="navbar-links">
-                <div class="navbar-link">Acerca de mi</div>
-                <div class="navbar-link">Propuestas</div>
-                <div class="navbar-link">Media</div>
-                <div class="navbar-link">Contacto</div>
+                <a class="navbar-link" href="#acercaDeMi">Acerca de mi</a>
+                <a class="navbar-link" href="#propuestas">Propuestas</a>
+                <a class="navbar-link" href="#media">Media</a>
+                <a class="navbar-link" href="#suscribete">Contacto</a>
             </div>
         </div>
         
         <!-- Banner -->
-        <div class="banner">
+        <div class="banner" id="banner">
             <div class="banner-content">
                 <div class="banner-text">
-                    <div class="banner-title">Hola<br>Soy Daniel</div>
+                    <div class="banner-title">Hola,<br>Soy Daniel</div>
                     <div class="banner-subtitle">Candidato Independiente a Diputado</div>
                     <button class="hire-button">Hire Me</button>
                 </div>
                 <div class="banner-image">
-                    <img src="https://via.placeholder.com/373x429" alt="Mi Imagen">
+                    <img src="styles\img\fotos\fotoPrincipal.png" alt="">
+                    <img src="styles\img\fondos\Screenshot 2023-09-25 230513.png" alt="">
                 </div>
             </div>
         </div>
         
-        <!-- Acerca de mí -->
-        <div class="about">
-            <div class="about-title">Acerca de mí</div>
-            <div class="about-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique elit nec malesuada tincidunt. Pellentesque lobortis metus quis ipsum mattis, vitae laoreet est posuere. Mauris bibendum eros massa, sit amet tempor sem lobortis non.
+        <!-- Acerca de Mí -->
+        <div class="acercaDeMi" id="acercaDeMi">
+            <h2>Acerca<br>de Mí</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio necessitatibus perferendis non explicabo obcaecati sequi nobis, quisquam in, doloribus asperiores ullam iusto autem, eaque consequatur? Laborum incidunt molestiae amet asperiores soluta accusantium, nostrum dolorum repudiandae.</p>
+                <div>
+                    <button class="hire-button">Hire Me</button>
+                    <button class="hire-button hire-button2">View CV</button>
+                </div>
             </div>
-            <button class="about-button view-cv-button">View CV</button>
-            <button class="about-button hire-button">Hire Me</button>
         </div>
-        
+
         <!-- Propuestas -->
-        <div class="service-block">
-            <div class="banner-content">
-                <div class="banner-text">
-                    <div class="banner-title">Título del Servicio</div>
-                    <div class="banner-subtitle">Descripción del servicio</div>
+        <div class="propuestas" id="propuestas">
+            <h2>Propuestas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae unde fuga, iusto repellendus sit earum vitae accusantium labore optio quae aliquid, in, sapiente porro!</p>
+            <div class="cards">
+                <div class="card">
+                    <section>
+                        <img src="styles\img\iconos\building-columns-solid.svg" alt="">
+                    </section>
+                    <h3>Institucionalidad</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!</p>
+                </div>
+                <div class="card">
+                    <section>
+                        <img src="styles\img\iconos\scale-balanced-solid.svg" alt="">
+                    </section>
+                    <h3>Justicia</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!</p>
+                </div>
+                <div class="card">
+                    <section>
+                        <img src="styles\img\iconos\handshake-solid.svg" alt="">
+                    </section>
+                    <h3>Transparencia</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!</p>
                 </div>
             </div>
         </div>
         
         <!-- Media -->
-        <div class="blog">
-            <div class="blog-title">Media</div>
-            <!-- Aquí puedes agregar tus entradas de blog -->
+        <div class="media" id="media">
+            <h2>Media</h2>
+            <div class="medias">
+                <div class="foto">
+                    <img src="styles\img\fondos\fondo_banner.jpg" alt="">
+                    <div>
+                        <h3>Foto</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?</p>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="styles\img\fondos\fondo_banner.jpg" alt="">
+                    <div>
+                        <h3>Video</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="medias">
+                <div class="foto">
+                    <img src="styles\img\fondos\fondo_banner.jpg" alt="">
+                    <div>
+                        <h3>Foto</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?</p>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="styles\img\fondos\fondo_banner.jpg" alt="">
+                    <div>
+                        <h3>Video</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <!-- Contacto -->
-        <div class="contact">
-            <div class="contact-title">Contacto</div>
-            <!-- Aquí puedes agregar tu formulario de contacto -->
+
+        <!-- Suscribete -->
+        <div class="suscribete" id="suscribete">
+            <h2>Suscríbete</h2>
+            <div class="infoSuscribete">
+                <form action="" method="POSt">
+                    <h3>Envíame un Mensaje por Correo!</h3>
+                    <section>
+                        <label for="email">
+                            Email:<br>
+                            <input type="email" name="email" id="email" placeholder="suemail@gmail.com">
+                        </label>
+                        <label for="name">
+                            Nombre:<br>
+                            <input type="tel" name="name" id="name" placeholder="Su Nombre">
+                        </label>
+                    </section>
+                    <label for="mensaje">
+                        Mensaje:
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="7" placeholder="Redacte su mensaje"></textarea>
+                    </label>
+                    <input type="submit" value="Enviar">
+                </form>
+                <section>
+                    <h3>Sígueme en mis Redes Sociales</h3>
+                    <div class="social">
+                        <div>
+                            <section>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                <img src="styles\img\iconos\whatsapp.webp" alt=""></a>
+                                <p>+507 0000-0000</p>
+                            </section>
+                            <section>
+                                <a href="https://www.instagram.com/" target="_blank"><img src="styles\img\iconos\instagram.png" alt=""></a>
+                                <p>Daniel Lombana</p>
+                            </section>
+                        </div>
+                        <div>
+                            <section>
+                                <a href="https://www.facebook.com/" target="_blank"><img src="styles\img\iconos\Facebook.webp" alt=""></a>
+                                <p>Daniel Lombana</p>
+                            </section>
+                            <section>
+                                <a href="https://www.linkedin.com/" target="_blank"><img src="styles\img\iconos\linkedin.png" alt=""></a>
+                                <p>Daniel Lombana</p>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
         </div>
-        
+
         <!-- Footer -->
         <footer style="background-color: #1C2545; color: #F8F9FA; text-align: center; padding: 20px;">
             <!-- Contenido del footer, como información de contacto adicional, enlaces, etc. -->

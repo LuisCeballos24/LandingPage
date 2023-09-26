@@ -1,3 +1,13 @@
+:root{
+    --colorRosadoPuro: #ed00b7;
+    --colorRosadoSuave: rgb(255, 177, 237);
+    --colorAzulPuro: #1c2545;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -20,40 +30,52 @@ body {
 }
 /* Estilos de la barra de navegación */
 .navbar {
+    top: 0;
+    z-index: 1;
     background-color: #1C2545; /* Color de fondo */
     color: #F8F9FA;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
     width: 100%; /* Ocupa todo el ancho de la ventana */
+    height: 80px;
+    position: fixed;
 }
 
 /* Ajusta el ancho del logotipo si es necesario */
 .navbar-logo {
     font-size: 40px;
     font-weight: 700;
+    margin-left: 3%;
+    text-decoration: none;
+    color: white !important;
     /* Otros estilos para el logotipo */
 }
 
 /* Ajusta el ancho y el espacio entre los enlaces si es necesario */
 .navbar-links {
+    width: 35%;
+    margin: 0 2%;
     display: flex;
+    gap: 10%;
+    align-items: center;
     /* Otros estilos para los enlaces */
+}
+.navbar-link{
+    text-decoration: underline;
+    color: white !important;
+
 }
 
-.navbar-link {
-    margin-right: 20px;
-    /* Otros estilos para los enlaces */
-}
 
 /* Estilos del banner */
 /* Estilos para el banner */
 .banner {
     width: 100%; /* Ocupa todo el ancho de la página */
-    height: 100%;
+    padding-top: 200px;
+    height: 60vh;
     position: relative;
-    background: rgba(236, 247, 247, 0.5); /* Cambia el valor alfa a 0.1 para hacerlo más transparente */
-    padding: 20px;
+    background: #F8F9FA; /* Cambia el valor alfa a 0.1 para hacerlo más transparente */
 }
 
 /* Estilos para el contenido del banner */
@@ -61,17 +83,37 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60vh;
+    margin-top: -12vh;
 }
 
 .banner-text {
-    flex: 1; /* Ocupa el espacio disponible */
     text-align: center;
+    width: 25%;
+    margin-left: 20%;
+    text-align: left;
 }
 
 /* Estilos para la imagen en el banner */
-.banner-image img {
-    max-width: 50%; /* Ajusta el ancho de la imagen al 50% del banner */
-    height: auto;
+.banner-image{
+    width: 45%;
+    padding: 15% 0;
+    min-width: 600px;
+    max-width: 650px;
+    position: relative;
+}
+.banner-image img{
+    width: 100%;
+    margin-top: 10vh;
+    height: 60vh;
+}
+.banner-image img:first-child {
+    max-width: 70%; /* Ajusta el ancho de la imagen al 50% del banner */
+    position: absolute;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+}
+.banner-image img:last-child {
+    max-width: 70%; /* Ajusta el ancho de la imagen al 50% del banner */
 }
 /* Estilos para el texto en el banner */
 /* Estilos para el título en el banner */
@@ -80,6 +122,7 @@ body {
     font-family: Inter;
     font-weight: 700;
     line-height: 1.2;
+    color:rgb(22, 22, 22);
     margin-bottom: 10px; /* Reduce el margen inferior del título */
 }
 
@@ -93,7 +136,8 @@ body {
 }
 
 /* Estilos para el botón "Hire Me" en el banner */
-.hire-button {
+.hire-button, .hire-button2 {
+    font-family: Arial, Helvetica, sans-serif !important;
     width: 115px;
     height: 44px;
     background: #212529;
@@ -105,6 +149,185 @@ body {
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
+}
+
+.hire-button2{
+    background: #F8F9FA !important;
+    color: #212529 !important;
+    border: 2px solid #212529;
+    border-radius: 10px;
+}
+
+/* Acerca de Mí */
+.acercaDeMi{
+    width: 100%;
+    color: black;
+    background-color: var(--colorRosadoSuave);
+    padding: 12vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-size: 1.5rem;
+}
+.acercaDeMi h2{
+    width: 20%;
+    margin-left: 5%;
+    font-size: 3rem;
+}
+.acercaDeMi div{
+    width: 50%;
+    text-align: justify;
+}
+
+/*  Propuestas  */
+.propuestas{
+    width: 100%;
+    height: 60vh;
+    padding: 17vh 0 25vh 0;
+    background-color: #F8F9FA;
+    color: black;
+}
+.propuestas h2{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    font-size: 3rem;
+}
+.propuestas p{
+    width: 60%;
+    margin: 1.5% auto;
+    text-align: justify;
+    color: #6C757D;
+    font-size: 1.4rem;
+}
+.cards{
+    padding: 2vh 0;
+    width: 70%;
+    margin: 0 auto;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 30px;
+}
+.card{
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    border-radius: 10px;
+    padding: 15% 0;
+    filter: drop-shadow(3px 5px 10px rgba(0, 0, 0, 0.7));
+}
+.card h3{
+    text-align: center;
+    width: 100%;
+    font-size: 1.4rem;
+}
+.card section{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img{
+    filter: invert();
+    max-width: 60px;
+    margin: auto;
+}
+.card p{
+    width: 80%;
+    margin: auto;
+}
+
+/* Media */
+.media{
+    width: 100%;
+    color: black;
+    background-color: var(--colorRosadoSuave);
+    padding: 12vh 0;
+    font-size: 1.5rem;
+}
+.media h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.medias{
+    width: 70%;
+    margin: 1.5% auto 1.5% auto;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 30px;
+}
+.foto, .video{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F9FA;
+    border-radius: 10px;
+}
+.foto div, .video div{
+    margin-left: 5%;
+}
+.medias img, .medias video{
+    width: 35%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+/*  Suscribete  */
+.suscribete{
+    width: 100%;
+    height: 60vh;
+    padding: 17vh 0 14vh 0;
+    background-color: #F8F9FA;
+    color: black;
+    font-size: 1.5rem;
+}
+.suscribete h2{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    font-size: 3rem;
+}
+.infoSuscribete{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.infoSuscribete form{
+    width: 100%;
+}
+.infoSuscribete form section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.infoSuscribete label, label input, textarea{
+    width: 100%;
+    margin: .5% 0;
+    border-radius: 2px;
+    font-size: 1.3rem;
+}
+input[type='submit']{
+    font-size: 1.3rem;
+    padding: .5% 10%;
+    color: white;
+    background-color: var(--colorAzulPuro);
+    border-radius: 5px;
+}
+.social div section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.social div section img{
+    max-width: 45px;
+    min-width: 45px;
 }
 
 /* Estilos para pantallas pequeñas (por ejemplo, teléfonos móviles) */
@@ -126,54 +349,3 @@ body {
     /* Modifica otros estilos según sea necesario para pantallas pequeñas */
 }
 
-/* Estilos de la sección "Acerca de mí" */
-.about {
-    background-color: rgba(237, 7, 183, 0.17);
-    padding: 100px 0;
-    text-align: center;
-}
-.about-button.view-cv-button {
-    background-color: #F8F9FA;
-    color: #212529;
-    font-size: 20px;
-    font-weight: 600;
-    border: 2px solid #212529;
-    border-radius: 10px;
-    padding: 10px 30px;
-    margin-top: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-/* Estilos para los bloques de servicio */
-.service-block {
-    background: rgba(28, 37, 69, 0.17);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 100%; /* Establece el ancho máximo al 100% */
-    margin: 0 auto; /* Centra el bloque horizontalmente */
-    text-align: center; /* Centra el contenido horizontalmente */
-}
-
-.service-block .banner-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.service-block .banner-text {
-    flex: 1;
-}
-
-.service-block .banner-title {
-    font-size: 32px; /* Ajusta el tamaño del título */
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.service-block .banner-subtitle {
-    font-size: 16px; /* Ajusta el tamaño del subtítulo */
-    font-weight: 400;
-    color: #6C757D;
-    margin-top: 10px;
-}
