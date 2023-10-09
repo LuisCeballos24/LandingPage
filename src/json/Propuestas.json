@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "img": "icons/building-columns-solid.svg",
+    "title": "Institucionalidad",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!"
+  },
+  {
+    "id": 2,
+    "img": "icons/scale-balanced-solid.svg",
+    "title": "Justicia",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!"
+  },
+  {
+    "id": 3,
+    "img": "icons/handshake-solid.svg",
+    "title": "Transparencia",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!"
+  }
+]

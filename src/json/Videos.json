@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "img": "icons/building-columns-solid.svg",
+    "title": "Video 1",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?"
+  },
+  {
+    "id": 2,
+    "img": "icons/scale-balanced-solid.svg",
+    "title": "Video 2",
+    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?"
+  }
+]

@@ -2,6 +2,7 @@
     --colorRosadoPuro: #ed00b7;
     --colorRosadoSuave: rgb(244, 177, 228);
     --colorAzulPuro: #1c2545;
+    --verdeOscuro: #07c73d;
 }
 
 html{
@@ -62,7 +63,7 @@ body {
     /* Otros estilos para los enlaces */
 }
 .navbar-link{
-    text-decoration: underline;
+    text-decoration: underline var(--colorRosadoSuave) 2px;
     color: white !important;
 }
 .hamburguer{
@@ -88,40 +89,40 @@ body {
 /* Estilos para el contenido del banner */
 .banner-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 60vh;
     margin-top: -12vh;
+    width: 100%;
+    gap: 4%;
 }
 
 .banner-text {
     text-align: center;
-    width: 30%;
-    margin-left: 18%;
     text-align: left;
+    width: 30%;
+    padding-left: 18%;
 }
 
 /* Estilos para la imagen en el banner */
 .banner-image{
-    width: 50%;
-    padding: 15% 0;
-    min-width: 600px;
-    max-width: 650px;
+    width: 48%;
     position: relative;
 }
 .banner-image img{
-    width: 100%;
+    max-width: 600px;
+    min-width: 400px;
     margin-top: 10vh;
     height: 60vh;
 }
 .banner-image img:first-child {
-    max-width: 70%; /* Ajusta el ancho de la imagen al 50% del banner */
+    
     position: absolute;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
 }
-.banner-image img:last-child {
-    max-width: 70%; /* Ajusta el ancho de la imagen al 50% del banner */
-}
+/* .banner-image img:last-child {
+    
+} */
 /* Estilos para el texto en el banner */
 /* Estilos para el título en el banner */
 .banner-title {
@@ -218,7 +219,7 @@ body {
 }
 .card{
     width: 100%;
-    background-image: url('../img/fondos/fondo_banner.jpg');
+    background-image: url('http://localhost:5173/src/img/fondos/fondo_banner.jpg');
     color: white;
     border-radius: 10px;
     padding: 15% 0;
@@ -339,6 +340,120 @@ input[type='submit']{
     min-width: 45px;
 }
 
+.divSocial{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+}
+
+/* ANIMACIONES */
+.Burger{
+    display: none;
+  }
+  #btnBurger{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    z-index: 11;
+  }
+  #btnBurger::before{
+    content: '';
+    width: 40px;
+    height: 4px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    transition: .5s;
+    transform: translateY(-13px);
+    box-shadow: 0 13px 0 #fff;
+  }
+  #btnBurger::after{
+    content: '';
+    width: 40px;
+    height: 4px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    transition: .5s;
+    transform: translateY(13px);
+  }
+  
+  #btnBurger.active::before{
+    background-color: var(--colorRosadoSuave);
+    box-shadow: 0 13px 0 var(--colorRosadoSuave);
+  }
+  #btnBurger.active::after{
+    background-color: var(--colorRosadoSuave);
+  }
+  #btnBurger img{
+    filter: invert();
+  }
+
+  /* #slideBurgerOculto{
+    opacity: 0;
+    display: none;
+  } */
+  
+  #slideBurger{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 35%;
+    height: 100vh;
+    background-color: var(--colorAzulPuro);
+    color: #fff;
+    border-left: 3px solid var(--colorRosadoSuave);
+  }
+  #slideBurger a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .hideBurger{
+    transition: .5s;
+    display: none !important;
+  }
+  .underline {
+    display: inline-block;
+    position: relative;
+  }
+  .underline:after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 4px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--colorRosadoSuave);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    border-radius: 10px;
+  }
+  .underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1425px) {
+    .banner-image img{
+        max-width: 450px;
+        height: 450px;
+    }
+}
 
 @media only screen and (max-width: 1300px) {
     .propuestas {
@@ -373,23 +488,31 @@ input[type='submit']{
     .navbar-links{
         display: none;
     }
-    .hamburguer{
+    .Burger {
         display: block;
-    }
+      }
     .banner-content{
-        width: 100%;
+        width: 100% !important;
     }
     .banner-text{
-        width: 50%;
-        margin-left: 10%;
+        width: 45%;
+        padding-left: 5%;
     }
     .banner-image{
-        width: 40%;
-        height: 50vh;
-        margin-top: -15%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vh !important;
+    }
+    .banner-image img{
+        margin-top: 10vh;
+        max-width: 450px;
+        max-height: 450px;
+        margin: 0 !important;
+        padding: 0;
     }
     .suscribete{
-        
         padding-bottom: 40vh;
     }
     .infoSuscribete{
@@ -403,22 +526,17 @@ input[type='submit']{
         padding: 0;
         margin: 0;
     }
-    .social div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10%;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
     .banner{
-        padding-bottom: 55vh; 
+        padding-bottom: 60vh; 
     }
     .banner-content {
         width: 100%;
         display: flex;
         flex-direction: column;
+        height: auto;
     }
     .banner-text{
         width: 80%;
@@ -427,8 +545,12 @@ input[type='submit']{
         text-align: center;
     }
     .banner-image{
-        width: 80%;
-        margin-top: -15%;
+        margin-top: -5%;
+        width: 100%;
+    }
+    .banner-image img{
+        width: 60%;
+        margin-left: 20%;
     }
 }
 
@@ -443,26 +565,25 @@ input[type='submit']{
         width: 90%;
         margin-bottom: 30px;
     }
+    #slideBurger{
+        width: 45%;
+    }
 }
 
 
 
-/* Estilos para pantallas pequeñas (por ejemplo, teléfonos móviles) */
 @media screen and (max-width: 768px) {
-    /* Modifica los estilos de la barra de navegación */
-    .navbar {
-        padding: 10px; /* Reduce el espaciado */
-    }
+    /* .navbar {
+        padding: 10px;
+    } */
 
     .navbar-logo {
-        font-size: 30px; /* Reduce el tamaño del logo */
+        font-size: 30px;
     }
 
     .navbar-link {
-        font-size: 16px; /* Reduce el tamaño de los enlaces de navegación */
+        font-size: 16px;
         margin-right: 10px;
     }
-
-    /* Modifica otros estilos según sea necesario para pantallas pequeñas */
 }
 
