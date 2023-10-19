@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "apirest-377101",
+  "private_key_id": "ac5d7a9402cfe014e346bd7a7d28ad7cfa8e6f26",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDkfnP06nG+9TT\n1xb3XiJA1mT35z1IrMlW7fqVKvs9q2Nytrd1A+tw+ADTj+M2dYcxu7PKTWylwZB+\nf4AnG9oD5UDRwYxaD/NXhTerxft21jsNO6w+kXOGPnf7PAM/heFDs47A2UBFE4Xc\nVJSw1wtG1coBgLA1+HCwonWwMYNpY9+x8DWYzBpvJU2qYPvWPyD3t5OPbQ1feDhA\n2X/samYegV34oV3tRt1eYWz7+t2IsaqqjD6cSWmFD4OHyQbMXK6Vh91QWiVr5J55\nWDmjL9h/IWso0u5yyAXBuUfoBHM1+Co+NnPaT/yHd690R1yrktyr+zCgdAUH+9OV\n5w3z8kPvAgMBAAECggEADf2UYcIM7uI3GyHTpRtD12A/ADO3q5+eFleXSd01n0zH\nztNevm1AW5Lc+ZrdMJkpycIEHkskTvCmS0EIbu52zePe8OJ9YuKp5YSZ3fJKMfnT\nZvfyM4D+QwfsV2RiAG+tv2/J8jvYdYNBsT26bAgw6KlZ9no5S4hxWgF/6nyFn8qt\nfKZkITQcJz1ysSuNc4iYMj/pm5D7TlNU9donPEq0SoO9Ov2KlLFFl7+7vpZU0hnt\nXh4KyCZx99xaCZxFOQQkbODLnBab86GWd4QoREGpokLmyDO9Dz5O7hiH0S5r37Ig\nPun/t7tJR3TUPJDn/6BnG8OuZnV63x265B/LSsyK4QKBgQDzE7HVFD4kkyfoAjgb\nJy/Da9FqVkBHHrU8dLgeLdsPygwftLMf3tVMQUrAJiqO9Cj0MDa3BQjj6T3Sa63X\nKRrpYVQqO5UNeUueilWzhNTNFRvN/bo6cNe2euw3NNU6PttpflNTdCu6JKa5gM1y\nFG3BmjyWaOrCUT3moXZWcmy5sQKBgQDN97WSEL7Pp3JOoo79Kf0NMlfag2v+g6u+\nRGp9xKR0iC8lZilPf6UdhEDf/99fnHJ2qXiXNxUpAJ4+GTIE/q4LHReymJbcPAvm\nC7vS9a4HppD6bPmCnEh3g/yOk7hBpA9qJWHKabogowYyphOvjZFA6zAKo13ee89Y\nAQ1/W/afnwKBgQDkLYixzN7I1pqPYAXq904O1BcxCuYr3NekeKydJ86Lc88NtEKx\nmCwB+QiCd1FcADaxgtDZ3RALYdd2vz3gy+VHTuYC/wtcKpChspngesCIA1imdZdr\nZKIZ2ioDaMUAeCDfVoZBwLuLcPxRBmfUvviI1JArYTF+V2UUKl07qQ4HAQKBgFF+\nwLYRsB4jyAO7KE6dbYXqNH6+X12uJac8FNK8msGNHPJ0UMYm4GMkcDLxYCXJljTD\na3aRkerOVs6FU5hMWPsGwNimrZJoo+CbJe8bzIc0bcrYkYUPZ1D6xVR4uIAodPzv\n25imasH9HzetJL7iieWg6TpcV4jvfiP5Dqkk7xlLAoGAJDW3m12lZ49eJ+VLrKYN\nSN8VwggvkNKatxYJkhS3rpAIHeorYOtlUJL3tzrgXe0aBUIJouZS6ussWzXXJPPc\nFwQhwF4mRqzHFELbV/L4uyqVhnzF0WWnfGv60CP5OYucryg4UP84XP4m1+4HKSSi\nmNclcPzrar8fUKSBlIauONA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "diputado@apirest-377101.iam.gserviceaccount.com",
+  "client_id": "115056416030554423910",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/diputado%40apirest-377101.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

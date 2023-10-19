@@ -1,38 +1,38 @@
+// Suscribete.jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import jsonRedesSociales from '../json/RedesSociales.json';
 import { HashLink } from 'react-router-hash-link';
+import jsonRedesSociales from '../json/RedesSociales.json';
 
 export function Suscribete() {
   const { register, handleSubmit, reset } = useForm();
 
-  const enviarDatosAGoogleSheets = async (data) => {
-    const SPREADSHEET_ID = 'tu-id-de-hoja-de-google-sheets';
-    const CLIENT_ID = 'tu-client-id'; // Esto es seguro solo en el lado del cliente
-
+  const onSubmit = async (data) => {
     try {
-      const response = await axios.post(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/Hoja1!A1:append?valueInputOption=USER_ENTERED`,
-        {
-          values: [Object.values(data)],
-        },
-        {
-          params: { key: CLIENT_ID },
-        }
-      );
-
-      console.log('Datos enviados a Google Sheets:', response);
+      console.log('Datos enviados al servidor:', data);  // Agregar este log
+      const response = await axios.post('http://localhost:3001/google-sheets', { data }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        // Añade otras cabeceras según sea necesario
+      },
+    });
+      console.log('Respuesta del servidor:', response.data);
+      reset();
     } catch (error) {
-      console.error('Error al enviar datos a Google Sheets:', error);
+      if (error.response) {
+        // La solicitud fue hecha y el servidor respondió con un código de estado diferente de 2xx
+        console.error('Error de respuesta del servidor:', error.response.data);
+      } else if (error.request) {
+        // La solicitud fue hecha pero no se recibió ninguna respuesta
+        console.error('No se recibió respuesta del servidor');
+      } else {
+        // Algo sucedió en la configuración de la solicitud que desencadenó un error
+        console.error('Error al configurar la solicitud:', error.message);
+      }
     }
   };
-
-  const onSubmit = (data) => {
-    enviarDatosAGoogleSheets(data);
-    reset(); // Limpia el formulario después de enviar
-  };
-
   return (
     <div className="suscribete" id="suscribete">
       <h2>Suscríbete</h2>
