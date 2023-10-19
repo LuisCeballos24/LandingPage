@@ -1,14 +1,20 @@
 [
   {
     "id": 1,
-    "img": "icons/building-columns-solid.svg",
-    "title": "Foto 1",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?"
+    "img": "foto1.png",
+    "title": "✓ Rescataré a la Caja de Seguro Social",
+    "info": "por medio de una reforma a la Ley 51 de 2005 que establezca el acceso a la directiva por concurso, méritos, capacidad y experiencia comprobada"
   },
   {
     "id": 2,
-    "img": "icons/scale-balanced-solid.svg",
-    "title": "Foto 2",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?"
+    "img": "foto2.png",
+    "title": "✓ NO JUBILACIÓN PARA LAS BOTELLAS",
+    "info": "La corrupción y los nombramientos de botellas generan que, tras que hay que pagarles sin trabajar, nos toca pagarles jubilación."
+  },
+  {
+    "id": 3,
+    "img": "foto3.png",
+    "title": "✓ RED SOCIAL PARLAMENTARIA",
+    "info": "Buscaré participar en la directiva de la Asamblea Nacional para impulsar la modernización del sitio web y hacerlo interactivo."
   }
 ]

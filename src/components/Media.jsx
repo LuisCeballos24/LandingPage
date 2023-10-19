@@ -17,7 +17,7 @@ export function Media() {
         <div className="medias">
             { jsonFotos.map( item => (
                 <div className="foto" key={'foto'+item.id}>
-                    <img src={fondoBanner} alt="" />
+                    <img src={'http://localhost:5173/src/img/fotos/'+item.img} alt={item.title} />
                     <div>
                         <h3>{item.title}</h3>
                         <p>{item.info}</p>
