@@ -2,7 +2,7 @@
 export default {
   server: {
     proxy: {
-      '/google-sheets': 'http://localhost:3001',
+      '/store-data': 'http://localhost:3001',
     },
   },
 };

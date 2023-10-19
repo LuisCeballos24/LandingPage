@@ -10,29 +10,24 @@ export function Suscribete() {
 
   const onSubmit = async (data) => {
     try {
-      console.log('Datos enviados al servidor:', data);  // Agregar este log
-      const response = await axios.post('http://localhost:3001/google-sheets', { data }, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        // Añade otras cabeceras según sea necesario
-      },
-    });
+      console.log('Datos enviados al servidor:', data);
+      const response = await axios.post('http://localhost:3001/store-data', { data });
       console.log('Respuesta del servidor:', response.data);
       reset();
     } catch (error) {
-      if (error.response) {
-        // La solicitud fue hecha y el servidor respondió con un código de estado diferente de 2xx
-        console.error('Error de respuesta del servidor:', error.response.data);
-      } else if (error.request) {
-        // La solicitud fue hecha pero no se recibió ninguna respuesta
-        console.error('No se recibió respuesta del servidor');
-      } else {
-        // Algo sucedió en la configuración de la solicitud que desencadenó un error
-        console.error('Error al configurar la solicitud:', error.message);
-      }
+      // Manejo de errores
     }
   };
+
+  const onGenerateExcel = async () => {
+    try {
+      // Realizar una solicitud GET para obtener el archivo Excel
+      window.open('http://localhost:3001/generate-excel', '_blank');
+    } catch (error) {
+      // Manejo de errores
+    }
+  };
+
   return (
     <div className="suscribete" id="suscribete">
       <h2>Suscríbete</h2>
@@ -58,6 +53,7 @@ export function Suscribete() {
             <textarea {...register('mensaje')} cols="30" rows="7" placeholder="Redacte su mensaje"></textarea>
           </label>
           <input type="submit" value="Enviar" />
+          <button onClick={onGenerateExcel}>Generar Excel</button>
         </form>
         <section>
           <h3>Sígueme en mis Redes Sociales</h3>
