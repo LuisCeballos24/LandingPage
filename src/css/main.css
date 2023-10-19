@@ -261,28 +261,36 @@ body {
     font-size: 3rem;
 }
 .medias{
-    width: 70%;
+    width: 90%;
     margin: 1.5% auto 1.5% auto;
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 4fr));
     gap: 30px;
 }
 .foto, .video{
     width: 100%;
+    min-height: 120px;
+    max-height: 280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F8F9FA;
     border-radius: 10px;
 }
+
 .foto div, .video div{
-    margin-left: 5%;
+    width: 54%;
+    margin: auto;
 }
-.medias img, .medias video{
-    width: 35%;
+.medias img, .medias iframe{
+    width: 40%;
     height: 100%;
     border-radius: 10px 0 0 10px;
 }
+.foto div p, .video div p{
+    font-size: 1.3rem;
+}
+
 
 /*  Suscribete  */
 .suscribete{

@@ -4,6 +4,12 @@ import jsonVideos from '../json/Videos.json'
 import fondoBanner from '/src/img/fondos/fondo_banner.jpg'
 
 export function Media() {
+
+    function extractVideoIdFromShortUrl(url) {
+        const match = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+        return match ? match[1] : null;
+    }
+
   return (
     // Media
     <div className="media" id="media">
@@ -22,9 +28,9 @@ export function Media() {
         <div className="medias">
             { jsonVideos.map( item => (
                 <div className="video" key={'video'+item.id}>
-                    <img src={fondoBanner} alt="" />
+                    <iframe src={'https://www.youtube.com/embed/'+extractVideoIdFromShortUrl(item.url)} frameBorder="0" allowFullScreen target='_blank'></iframe>
                     <div>
-                        <h3>{item.title}</h3>
+                        <h4>{item.title}</h4>
                         <p>{item.info}</p>
                     </div>
                 </div>

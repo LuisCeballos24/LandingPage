@@ -2,13 +2,29 @@
   {
     "id": 1,
     "img": "icons/building-columns-solid.svg",
-    "title": "Video 1",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?"
+    "title": "Sal y Pimienta - Daniel Lombana - 22 de noviembre del 2022",
+    "info": "En el programa de hoy, conversamos con el abogado, Daniel Lombana, sobre la APP de recolección de firmas.",
+    "url": "https://youtu.be/iD5kxVSu7dA?si=0AJfciWEsawsEdkM"
   },
   {
     "id": 2,
     "img": "icons/scale-balanced-solid.svg",
-    "title": "Video 2",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, officia?"
+    "title": "EL PARLACEN | #UnCafeConKiKe Ft. Daniel Lombana",
+    "info": "Todo lo que debemos saber como panameños de EL PARLACEN... “ La Cueva de Ladrones”.",
+    "url": "https://youtu.be/vjOSRDY1sig?si=5EyhBijG3hzvRMDi"
+  },
+  {
+    "id": 3,
+    "img": "icons/scale-balanced-solid.svg",
+    "title": "Proponen aumentar dietas a directiva de la CSS",
+    "info": "Daniel Lombana, representante de la bancada independiente del diálogo por la Caja de Seguro Social (CSS), denunció que la mesa temática de administ...",
+    "url": "https://youtu.be/Q_97uQoYEtA?si=le8X8-3J8zmQjgde"
+  },
+  {
+    "id": 4,
+    "img": "icons/scale-balanced-solid.svg",
+    "title": "Análisis sobre facturación electrónica, aumento de contagios...",
+    "info": "En esta edición de Debate Abierto, el presidente del Colegio de Abogados, Juan Araúz y el director de...",
+    "url": "https://youtu.be/T72IlyoG3Qg?si=ST0-l8csYP6ouAao"
   }
 ]

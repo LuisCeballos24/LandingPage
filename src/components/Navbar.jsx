@@ -10,12 +10,12 @@ export function Navbar() {
   return (
     // <Barra de navegación 
     <div className="navbar">
-        <HashLink smooth className="navbar-logo" to="#banner">Daniel Lombana</HashLink>
+        <HashLink smooth="true"className="navbar-logo" to="#banner">Daniel Lombana</HashLink>
         <div className="navbar-links">
-            <HashLink smooth className="navbar-link" to="#acercaDeMi">Acerca de mi</HashLink>
-            <HashLink smooth className="navbar-link" to="#propuestas">Propuestas</HashLink>
-            <HashLink smooth className="navbar-link" to="#media">Media</HashLink>
-            <HashLink smooth className="navbar-link" to="#suscribete">Contacto</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#acercaDeMi">Acerca de mi</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#propuestas">Propuestas</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#media">Media</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#suscribete">Contacto</HashLink>
         </div>
         <Hambuerguesa />
     </div>
