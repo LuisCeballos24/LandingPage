@@ -1,48 +1,106 @@
 const express = require('express');
 const cors = require('cors');
-const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { Sequelize, DataTypes } = require('sequelize');
+const exceljs = require('exceljs');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Configuración de Sequelize y la base de datos MySQL
+const sequelize = new Sequelize('diputado', 'luis', '12345', {
+  host: 'localhost',
+  dialect: 'mysql',
+});
+
+// Define el modelo de la tabla en la base de datos
+const Data = sequelize.define('Data', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  number: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  mensaje: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+}, {
+  tableName: 'data', // Asegúrate de especificar el nombre correcto de la tabla en tu base de datos
+});
+
 // Habilitar CORS para todos los orígenes
 app.use(cors());
 
-// Parsear el cuerpo de la solicitud como JSON
+// Middleware para analizar el cuerpo de la solicitud como JSON
 app.use(express.json());
 
-app.post('/google-sheets', async (req, res) => {
+// Endpoint para almacenar datos en la base de datos
+app.post('/store-data', async (req, res) => {
   try {
     const { data } = req.body;
 
-    const spreadsheetId = '1n_WQUMuzeep5l_ovIUeGYw8K1gSlZ4Y1ulB2s-zYMjQ';
-    const creds = require('./diputado.json');
-    const doc = new GoogleSpreadsheet(spreadsheetId);;
-    
-    await doc.useServiceAccountAuth(creds);
-    await doc.loadInfo();
-    await doc.loadInfo();
-    const sheet = doc.sheetsByIndex[0];
+    // Almacena en la base de datos
+    const nuevaData = await Data.create(data);
 
-// Verifica que sheet sea una instancia válida de GoogleSpreadsheet
-    if (!(sheet instanceof GoogleSpreadsheet)) {
-      throw new Error('La hoja de cálculo no es una instancia válida de GoogleSpreadsheet');
-    }
-
-// Verifica que addRow esté disponible en la instancia de la hoja de cálculo
-    if (typeof sheet.addRow !== 'function') {
-      throw new Error('La función addRow no está disponible para esta hoja de cálculo');
-    }
-
-  await sheet.addRow(data);
-
-    res.status(200).json({ message: 'Solicitud exitosa a Google Sheets' });
+    res.status(200).json({ message: 'Datos almacenados exitosamente' });
   } catch (error) {
     console.error('Error en el servidor:', error);
     res.status(500).json({ error: error.message });
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor en ejecución en http://localhost:${PORT}`);
+// Endpoint para generar el archivo Excel
+app.get('/generate-excel', async (req, res) => {
+  try {
+    const data = await Data.findAll();
+
+    // Crear un nuevo libro de Excel
+    const workbook = new exceljs.Workbook();
+    const worksheet = workbook.addWorksheet('data');
+
+    // Agregar encabezados
+    worksheet.columns = [
+      { header: 'ID Usuario', key: 'id', width: 10 },
+      { header: 'Nombre', key: 'name', width: 30 },
+      { header: 'Número', key: 'number', width: 15 },
+      { header: 'Correo', key: 'email', width: 30 },
+      { header: 'Mensaje', key: 'mensaje', width: 40 },
+    ];
+
+    // Agregar datos
+    data.forEach((row) => {
+      worksheet.addRow(row.dataValues);
+    });
+
+    // Configurar la respuesta para enviar el archivo Excel
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.setHeader('Content-Disposition', 'attachment; filename=usuarios_data.xlsx');
+
+    // Escribir el archivo Excel en la respuesta
+    await workbook.xlsx.write(res);
+    res.end();
+  } catch (error) {
+    console.error('Error en el servidor:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Sincroniza el modelo con la base de datos
+sequelize.sync().then(() => {
+  console.log('Base de datos sincronizada');
+  // Inicia el servidor después de que la base de datos esté lista
+  app.listen(PORT, () => {
+    console.log(`Servidor en ejecución en http://localhost:${PORT}`);
+  });
 });

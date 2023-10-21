@@ -3,18 +3,18 @@
     "id": 1,
     "img": "icons/building-columns-solid.svg",
     "title": "Institucionalidad",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!"
+    "info": "NO MÁS TRAJES A LA MEDIDA DE LOS DIPUTADOS. Nunca habrá manera de corregir este problema hasta que les quitemos el poder de sus manos."
   },
   {
     "id": 2,
     "img": "icons/scale-balanced-solid.svg",
     "title": "Justicia",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!"
+    "info": "✓JUSTICIA TARDÍA NO ES JUSTICIA. Para nadie es un secreto que pedir justicia en este país es un desastre."
   },
   {
     "id": 3,
     "img": "icons/handshake-solid.svg",
-    "title": "Transparencia",
-    "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem minima, ratione qui ea sit necessitatibus!"
+    "title": "Transparencia ",
+    "info": "ADIÓS A LOS BLINDAJES. El gobierno actual se ha amparado en normas anacrónica para evitar rendir cuentas."
   }
 ]
