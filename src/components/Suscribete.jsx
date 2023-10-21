@@ -35,9 +35,9 @@ export function Suscribete() {
   };
   return (
     <div className="suscribete" id="suscribete">
-      <h2>Suscríbete</h2>
+      <h2 data-aos="fade-down" data-aos-duration="1000">Suscríbete</h2>
       <div className="infoSuscribete">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} data-aos="zoom-in-right" data-aos-duration="1000">
           <h3>Envíame un Mensaje por Correo!</h3>
           <section>
             <label htmlFor="email">
@@ -59,7 +59,7 @@ export function Suscribete() {
           </label>
           <input type="submit" value="Enviar" />
         </form>
-        <section>
+        <section data-aos="zoom-in-left" data-aos-duration="1000">
           <h3>Sígueme en mis Redes Sociales</h3>
           <div className="social">
             <div className="divSocial">

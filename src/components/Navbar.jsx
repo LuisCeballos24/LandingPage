@@ -10,7 +10,7 @@ export function Navbar() {
   return (
     // <Barra de navegación 
     <div className="navbar">
-        <HashLink smooth="true"className="navbar-logo" to="#banner">Daniel Lombana</HashLink>
+        <HashLink smooth="true"className="navbar-logo" to="#banner" data-aos="fade-right" data-aos-duration="1000">Daniel Lombana</HashLink>
         <div className="navbar-links">
             <HashLink smooth="true"className="navbar-link" to="#acercaDeMi">Acerca de mi</HashLink>
             <HashLink smooth="true"className="navbar-link" to="#propuestas">Propuestas</HashLink>
