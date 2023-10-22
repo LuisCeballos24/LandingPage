@@ -220,7 +220,7 @@ body {
 }
 .card{
     width: 100%;
-    background-image: url('http://localhost:5173/src/img/fondos/fondo_banner.jpg');
+    background-image: url('http://localhost:3000/src/img/fondos/fondo_banner.jpg');
     color: white;
     border-radius: 10px;
     padding: 15% 0;
@@ -361,6 +361,21 @@ input[type='submit']{
 }
 
 /* ANIMACIONES */
+
+.Toastify__toast {
+    background: #2196f3;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Estilo para el mensaje emergente centrado */
+  .Toastify__toast-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 .Burger{
     display: none;
   }

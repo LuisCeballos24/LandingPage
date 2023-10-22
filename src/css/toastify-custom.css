@@ -1,0 +1,13 @@
+.Toastify__toast {
+    background: #2196f3;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Estilo para el mensaje emergente centrado */
+  .Toastify__toast-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

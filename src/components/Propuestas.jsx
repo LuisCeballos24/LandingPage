@@ -15,7 +15,7 @@ export function Propuestas() {
             { jsonPropuestas.map(item => (
                 <div className="card" key={'propuesta'+item.id} data-aos={ item.id == 1 ? "flip-right" : item.id == 2 ? "flip-up" : "flip-left"} data-aos-duration="1500">
                     <section>
-                        <img src={'http://localhost:5173/src/img/' + item.img} alt="" />
+                        <img src={'http://localhost:3000/src/img/' + item.img} alt="" />
                     </section>
                     <h3>{item.title}</h3>
                     <p>{item.info}</p>

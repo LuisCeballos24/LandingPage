@@ -1,8 +1,8 @@
 // vite.config.js
-export default {
+import { defineConfig } from 'vite';
+
+export default defineConfig({
   server: {
-    proxy: {
-      '/store-data': 'http://localhost:3001',
-    },
+    port: 3000, // Puedes ajustar el puerto según sea necesario
   },
-};
+});
