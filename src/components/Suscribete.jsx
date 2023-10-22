@@ -58,7 +58,7 @@ export function Suscribete() {
               {jsonRedesSociales.map((item) => (
                 <section key={'redesSociales' + item.id}>
                   <HashLink to={item.url} target="_blank">
-                    <img src={'http://localhost:3000/src/img/' + item.img} alt={item.title} />
+                    <img src={'/img/' + item.img} alt={item.title} />
                   </HashLink>
                   <p>{item.account}</p>
                 </section>

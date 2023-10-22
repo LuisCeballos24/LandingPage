@@ -1,7 +1,6 @@
 import React from 'react'
 import jsonFotos from '../json/Fotos.json'
 import jsonVideos from '../json/Videos.json'
-import fondoBanner from '/src/img/fondos/fondo_banner.jpg'
 
 export function Media() {
 
@@ -17,7 +16,7 @@ export function Media() {
         <div className="medias">
             { jsonFotos.map( item => (
                 <div className="foto" key={'foto'+item.id} data-aos="fade-up" data-aos-duration={1000}>
-                    <img src={'http://localhost:3000/src/img/fotos/'+item.img} alt={item.title} />
+                    <img src={'/img/fotos/'+item.img} alt={item.title} />
                     <div>
                         <h3>{item.title}</h3>
                         <p>{item.info}</p>

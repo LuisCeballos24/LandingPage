@@ -1,9 +1,8 @@
 import React from 'react'
-import fotoPrincipal from '/src/img/fotos/Imagen1.png'
-import fondoFotoPrincipal from '/src/img/fondos/Screenshot 2023-09-25 230513.png'
 import { HashLink } from 'react-router-hash-link'
 
 export function Banner() {
+
   return (
     // Banner
     <div className="banner" id="banner">
@@ -17,8 +16,8 @@ export function Banner() {
                 <HashLink smooth="true" to="#acercaDeMi"><button className="hire-button" >Conóceme</button></HashLink>
             </div>
             <div className="banner-image" data-aos="zoom-in-left" data-aos-duration="1000">
-                <img src={fotoPrincipal} alt="" />
-                <img src={fondoFotoPrincipal} alt="" />
+                <img src={'/img/fotos/Imagen1.png'} alt="" />
+                <img src={'/img/fondos/Screenshot 2023-09-25 230513.png'} alt="" />
             </div>
         </div>
     </div>
