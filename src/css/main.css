@@ -606,3 +606,39 @@ input[type='submit']{
         grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     }
 }
+
+
+/* Alerta */
+/* Alerta */
+#alerta{
+    display: none;
+    position: fixed;
+    right: 0px;
+    bottom: 25px;
+    width: 350px;
+    height: auto;
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    border-radius: 10px 0 0 10px;
+    z-index: 11;
+  }
+  .mostrarAlerta{
+    display: block;
+    transition: .5s ease;
+    animation: mostrarAlert 6s ease-in-out infinite;
+  }
+  @keyframes mostrarAlert {
+    0%{ opacity: 0; }
+    10%, 90%{ opacity: 1; }
+    100%{ opacity: 0; }
+  }
+  .alertaSuccess{
+    border: 1px solid #158535;
+    background-color: #c0f6cf;
+    color: #158535;
+  }
+  .alertaError{
+    border: 1px solid #851515;
+    background-color: #f6c0c0;
+    color: #851515;
+  }

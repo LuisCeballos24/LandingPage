@@ -4,6 +4,7 @@ import { db } from '../utils/firebase'; // Ajusta la ruta según sea necesario
 import { HashLink } from 'react-router-hash-link';
 
 export function Suscribete() {
+  const alerta = document.getElementById("alerta")
   const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(null);
 
@@ -22,7 +23,28 @@ export function Suscribete() {
       // Almacena en la base de datos de Firebase
       await db.collection('users').add({
         ...data,
-      });
+      })
+      .then(res => {
+        alerta.innerHTML = "<strong>¡¡Excelente!!</strong> <br/> Muchas gracias por darnos su confianza!"
+        alerta.classList.add("alertaSuccess");
+        console.log(res);
+      
+      }).catch(err => {
+        alerta.innerHTML = `<strong>Opss, ha ocurrido un Error</strong> <br/> Disculpe, utilice esta funcionalidad más tarde.`
+        alerta.classList.add("alertaError");
+
+      }).finally(() => {
+        alerta.classList.add("mostrarAlerta");
+        alerta.style.display = "block";
+
+        setTimeout(() => {
+          alerta.classList.remove("mostrarAlerta", "alertaSuccess")
+          alerta.style.display = "none";
+        }, 6000);
+
+      })
+
+
       // Limpiar el formulario después del éxito
       reset();
       setError(null);
@@ -50,6 +72,7 @@ export function Suscribete() {
 
   return (
     <div className="suscribete" id="suscribete">
+      <div id="alerta">¡¡Excelente!! <br/> Muchas gracias por darnos su confianza!</div>
       <h2 data-aos="fade-down" data-aos-duration="1000">
         Suscríbete
       </h2>
