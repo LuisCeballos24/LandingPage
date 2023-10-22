@@ -22,14 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-public/css/main.css
-public/css/toastify-custom.css
-public/json/Fotos.json
-public/json/Propuestas.json
-public/json/RedesSociales.json
-public/json/Videos.json
-src/components/Banner.jsx
-src/components/Media.jsx
-src/components/Propuestas.jsx
-src/components/Suscribete.jsx
-src/css/main.css
