@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { db } from '../utils/firebase'; // Ajusta la ruta según sea necesario
-import jsonRedesSociales from '../json/RedesSociales.json';
 import { HashLink } from 'react-router-hash-link';
 
 export function Suscribete() {
   const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(null);
+
+  const [jsonRedesSociales, setJsonRedesSociales] = useState(null);
+
+  useEffect(() => {
+      // Cargar el archivo JSON utilizando una solicitud HTTP (fetch)
+      fetch('/json/RedesSociales.json')
+      .then((response) => response.json())
+      .then((data) => setJsonRedesSociales(data))
+      .catch((error) => console.error('Error al cargar el JSON:', error));
+  }, []);
 
   const onSubmit = async (data) => {
     try {
@@ -22,6 +31,22 @@ export function Suscribete() {
       setError(error.message);
     }
   };
+
+
+  if (jsonRedesSociales === null) {
+    return <div>Cargando...</div>;
+  }
+
+  // Realizar map solo si los datos están disponibles
+  const redesSociales = jsonRedesSociales.map((item, index) => (
+      // Renderiza tus elementos aquí
+      <section key={'redesSociales' + item.id}>
+        <HashLink to={item.url} target="_blank">
+          <img src={'/img/' + item.img} alt={item.title} />
+        </HashLink>
+        <p>{item.account}</p>
+      </section>
+  ));
 
   return (
     <div className="suscribete" id="suscribete">
@@ -55,14 +80,7 @@ export function Suscribete() {
           <h3>Sígueme en mis Redes Sociales</h3>
           <div className="social">
             <div className="divSocial">
-              {jsonRedesSociales.map((item) => (
-                <section key={'redesSociales' + item.id}>
-                  <HashLink to={item.url} target="_blank">
-                    <img src={'/img/' + item.img} alt={item.title} />
-                  </HashLink>
-                  <p>{item.account}</p>
-                </section>
-              ))}
+              {redesSociales}
             </div>
           </div>
         </section>
