@@ -33,7 +33,7 @@ export function Media() {
         <div className="foto" key={'foto'+item.id} data-aos="fade-up" data-aos-duration={1000}>
             <img src={'/img/fotos/'+item.img} alt={item.title} />
             <div>
-                <h3>{item.title}</h3>
+                <h4>{item.title}</h4>
                 <p>{item.info}</p>
             </div>
         </div>
