@@ -78,7 +78,7 @@ export function Suscribete() {
       </h2>
       <div className="infoSuscribete">
         <form onSubmit={handleSubmit(onSubmit)} data-aos="zoom-in-right" data-aos-duration="1000">
-          <h3>Envíame un Mensaje por Correo!</h3>
+          <h3>Introduzca sus datos para ponerme en contacto con usted!</h3>
           <section>
             <label htmlFor="email">
               Correo:<br />

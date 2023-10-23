@@ -11,6 +11,7 @@ html{
 
 /* Estilos generales */
 body {
+    width: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -18,14 +19,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #1C2545; /* Establece el color de fondo para toda la página */
+    background-color: #1C2545;
     color: #F8F9FA; /* Establece el color de texto predeterminado */
 }
 
 .container {
     max-width: 1200px; /* Limita el ancho máximo de la página */
     width: 100%;
-    padding: 20px; /* Agrega relleno para separar el contenido de los bordes */
+    padding: 20px 0; /* Agrega relleno para separar el contenido de los bordes */
     text-align: center; /* Centra el contenido horizontalmente */
 }
 /* Estilos de la barra de navegación */
@@ -37,7 +38,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ocupa todo el ancho de la ventana */
+    width: 100%;
     height: 80px;
     position: fixed;
 }
@@ -91,7 +92,7 @@ body {
     align-items: center;
     margin-top: -12vh;
     width: 100%;
-    gap: 4%;
+    gap: 4% 0;
 }
 
 .banner-text {
@@ -108,7 +109,7 @@ body {
 }
 .banner-image img{
     max-width: 600px;
-    min-width: 400px;
+    min-width: 300px;
     height: 60vh;
 }
 .banner-image img:first-child {
@@ -180,15 +181,11 @@ body {
     text-align: center;
     font-size: 3rem;
 }
-.acercaDeMi div{
-    width: 50%;
-    text-align: justify;
-}
 
 /*  Propuestas  */
 .propuestas{
     width: 100%;
-    padding: 17vh 0 0vh 0;
+    padding: 12vh 0;
     background-color: #F8F9FA;
     color: black;
 }
@@ -196,12 +193,15 @@ body {
     text-align: center;
     font-size: 3rem;
 }
-.propuestas p{
-    width: 60%;
+.propuestas p, .acercaDeMi p{
+    width: 80%;
     margin: 1.5% auto;
     text-align: justify;
     color: #6C757D;
     font-size: 1.4rem;
+}
+.acercaDeMi p{
+    color: black;
 }
 .propuestas .cards {
     padding: 5vh 0 10vh 0;
@@ -305,7 +305,6 @@ body {
 }
 .suscribete h2{
     text-align: center;
-    width: 40%;
     margin: auto;
     font-size: 3rem;
 }
@@ -489,10 +488,6 @@ input[type='submit']{
         margin: auto;
         text-align: center;
     }
-    .acercaDeMi h2{
-        width: 60%;
-        margin: auto;
-    }
     .acercaDeMi div{
         width: 80%;
         margin: auto;
@@ -601,9 +596,71 @@ input[type='submit']{
 }
 
 
+@media only screen and (max-width: 560px) {
+    .infoSuscribete form section{
+        display: block;
+    }
+    .infoSuscribete form section input, .infoSuscribete form section text-area{
+        margin-bottom: 13px;
+    }
+}
+
 @media only screen and (max-width: 700px) {
+    .banner{
+        padding-top: 200px;
+    }
+    .banner-image img{
+        width: 80%;
+    }
     .medias{
         grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .medias{
+        width: 85%;
+        border-radius: 5px;
+    }
+    .foto, .video{
+        width: 100%;
+        border-radius: 5px;
+        min-height: 150px;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #F8F9FA;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgb(95, 95, 95);
+    }
+
+    .foto div, .video div{
+        width: 90%;
+        margin: auto;
+    }
+    .foto img, .video iframe{
+        width: 100%;
+        min-height: 250px;
+        border-radius: 5px !important;
+        border-radius: 10px 0 0 10px;
+    }
+    .video iframe{
+        min-height: 300px;
+    }
+    .foto div h4, .video div h4{
+        font-size: 1.2rem;
+    }
+    .foto div p, .video div p{
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .banner-image img{
+        height: 130%;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
     }
 }
 
