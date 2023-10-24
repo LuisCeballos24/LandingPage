@@ -4,53 +4,33 @@ import { db } from '../utils/firebase'; // Ajusta la ruta según sea necesario
 import { HashLink } from 'react-router-hash-link';
 
 export function Suscribete() {
-  const alerta = document.getElementById("alerta")
-  const { register, handleSubmit, reset } = useForm();
-  const [error, setError] = useState(null);
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertType, setAlertType] = useState('');
 
-  const [jsonRedesSociales, setJsonRedesSociales] = useState(null);
-
-  useEffect(() => {
-      // Cargar el archivo JSON utilizando una solicitud HTTP (fetch)
-      fetch('/json/RedesSociales.json')
-      .then((response) => response.json())
-      .then((data) => setJsonRedesSociales(data))
-      .catch((error) => console.error('Error al cargar el JSON:', error));
-  }, []);
+  const showAlert = (message, type) => {
+    setAlertMessage(message);
+    setAlertType(type);
+    setTimeout(() => {
+      setAlertMessage('');
+      setAlertType('');
+    }, 6000);
+  };
 
   const onSubmit = async (data) => {
     try {
       // Almacena en la base de datos de Firebase
       await db.collection('users').add({
         ...data,
-      })
-      .then(res => {
-        alerta.innerHTML = "<strong>¡¡Excelente!!</strong> <br/> Muchas gracias por darnos su confianza!"
-        alerta.classList.add("alertaSuccess");
-        console.log(res);
-      
-      }).catch(err => {
-        alerta.innerHTML = `<strong>Opss, ha ocurrido un Error</strong> <br/> Disculpe, utilice esta funcionalidad más tarde.`
-        alerta.classList.add("alertaError");
+      });
 
-      }).finally(() => {
-        alerta.classList.add("mostrarAlerta");
-        alerta.style.display = "block";
-
-        setTimeout(() => {
-          alerta.classList.remove("mostrarAlerta", "alertaSuccess")
-          alerta.style.display = "none";
-        }, 6000);
-
-      })
-
+      showAlert('¡¡Excelente!! Muchas gracias por darnos su confianza!', 'success');
 
       // Limpiar el formulario después del éxito
       reset();
       setError(null);
     } catch (error) {
       console.error('Error:', error.message);
-      setError(error.message);
+      showAlert('Opss, ha ocurrido un Error. Disculpe, utilice esta funcionalidad más tarde.', 'error');
     }
   };
 
