@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react'
 
 export function Media() {
 
-    const [jsonFotos, setJsonFotos] = useState(null);
+    // const [jsonFotos, setJsonFotos] = useState(null);
     const [jsonVideos, setJsonVideos] = useState(null);
 
     useEffect(() => {
         // Cargar el archivo JSON utilizando una solicitud HTTP (fetch)
-        fetch('/json/Fotos.json')
-          .then((response) => response.json())
-          .then((data) => setJsonFotos(data))
-          .catch((error) => console.error('Error al cargar el JSON:', error));
+        // fetch('/json/Fotos.json')
+        //   .then((response) => response.json())
+        //   .then((data) => setJsonFotos(data))
+        //   .catch((error) => console.error('Error al cargar el JSON:', error));
 
         // Cargar el archivo JSON utilizando una solicitud HTTP (fetch)
         fetch('/json/Videos.json')
@@ -20,24 +20,24 @@ export function Media() {
     }, []);
 
       // Verificar si los datos están disponibles antes de realizar el map
-    if (jsonFotos === null) {
-        return <div>Cargando...</div>;
-    }
+    // if (jsonFotos === null) {
+    //     return <div>Cargando...</div>;
+    // }
     if (jsonVideos === null) {
         return <div>Cargando...</div>;
     }
 
     // Realizar map solo si los datos están disponibles
-    const fotos = jsonFotos.map((item, index) => (
-        // Renderiza tus elementos aquí
-        <div className="foto" key={'foto'+item.id} data-aos="fade-up" data-aos-duration={1000}>
-            <img src={'/img/fotos/'+item.img} alt={item.title} />
-            <div>
-                <h4>{item.title}</h4>
-                <p>{item.info}</p>
-            </div>
-        </div>
-    ));
+    // const fotos = jsonFotos.map((item, index) => (
+    //     // Renderiza tus elementos aquí
+    //     <div className="foto" key={'foto'+item.id} data-aos="fade-up" data-aos-duration={1000}>
+    //         <img src={'/img/fotos/'+item.img} alt={item.title} />
+    //         <div>
+    //             <h4>{item.title}</h4>
+    //             <p>{item.info}</p>
+    //         </div>
+    //     </div>
+    // ));
     const videos = jsonVideos.map((item, index) => (
         // Renderiza tus elementos aquí
         <div className="video" key={'video'+item.id} data-aos="fade-up" data-aos-duration={1000}>
@@ -59,9 +59,9 @@ export function Media() {
     // Media
     <div className="media" id="media">
         <h2 data-aos="fade-down" data-aos-duration="1000">Medios</h2>
-        <div className="medias">
+        {/* <div className="medias">
             {fotos}
-        </div>
+        </div> */}
         <div className="medias">
             {videos}
         </div>

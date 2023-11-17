@@ -22,5 +22,35 @@
     "img": "icons/people-group.svg",
     "title": "LIBERTAD DE EXPRESIÓN",
     "info": "NO TE CALLES. En los últimos tiempos se han ejercitado una pluralidad de acciones legales cuyo objetivo principal es silenciar voces críticas, lo cual es inaceptable en un país libre. Protegeremos desde la Asamblea el derecho ciudadano a ejercer su libertad de pensamiento y de expresión."
+  },
+  {
+    "id": 5,
+    "img": "icons/people-adult.svg",
+    "title": "CAJA DE SEGURO SOCIAL",
+    "info": "PA’FUERA LA JUNTA DIRECTIVA. No podemos continuar dejando una institución que maneja alrededor de 6 mil millones al año en manos de la misma gente que la ha llevado al despeñadero. Requerimos un cambio de rumbo urgente con ciudadanos honestos y conocedores de los temas, procesos y manejo de conceptos globales y estratégicos que implementen una administración visionaria, práctica y objetiva."
+  },
+  {
+    "id": 4,
+    "img": "icons/bug-slash.svg",
+    "title": "BASTA DE BOTELLAS",
+    "info": "NO JUBILACIÓN PARA LAS BOTELLAS. La corrupción y los nombramientos de botellas generan que, tras que hay que pagarles sin trabajar, luego nos toca pagarles jugosas jubilaciones. Propondré un anteproyecto de ley para que todo el que se le condene por haber cobrado sin trabajar no se le cuente para su jubilación ni para sus cuotas los años que haya cotizado siendo botella."
+  },
+  {
+    "id": 4,
+    "img": "icons/computer.svg",
+    "title": "TECNOLOGÍA",
+    "info": "BASTA DE PÁGINAS WEB CARAS Y GALLAS. Los sitios en línea de las instituciones públicas todos son complicados, con un diseño monótono, poco amigable y cuyo contenido pudiera ser mucho mejor organizado para los objetivos que deben cumplir. Promoveré a través de legislación la creación de sitios web de alta calidad, cuyas bases de datos y sistemas sean efectivos y eficientes para el ciudadano."
+  },
+  {
+    "id": 4,
+    "img": "icons/people-participation.svg",
+    "title": "PARTICIPACIÓN CIUDADANA",
+    "info": "DESPACHO DE PUERTAS ABIERTAS. Impulsaré un despacho abierto que se mantenga en constante comunicación por medio de nuestra página web, redes sociales, WhatsApp, teléfono y otros medios para que los ciudadanos puedan impactar directamente en la forma como se debaten las leyes en la Asamblea."
+  },
+  {
+    "id": 4,
+    "img": "icons/digital-comunity.svg",
+    "title": "COMUNIDAD DIGITAL PARLAMENTARIA",
+    "info": "PARLAMENTO ABIERTO. Buscaré participar en la directiva de la Asamblea Nacional para impulsar la modernización del sitio web y hacerlo interactivo. Las personas podrán obtener un usuario con su cédula y comentar sobre los proyectos de Ley. Además, de suscribirse, recibir información sobre las horas y días de los debates en comisiones, dar seguimiento a los proyectos de ley de su interés, entre otros."
   }
 ]
