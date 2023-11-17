@@ -13,13 +13,13 @@ export const Login = () => {
 
         console.log(datosColeccion)
         datosColeccion = datosColeccion.map( item => { 
-            return { Nombre: item.name , Telefono : item.number, Correo : item.email, Mensaje : item.mensaje }; 
+            return { Nombre: item.name, SegundoNombre: item.secondName, Apellido: item.lastName, SegundoApellido: item.secondLastName, Correo : item.email, Telefono : item.number, Mensaje : item.mensaje }; 
         });
 
         const ws = XLSX.utils.json_to_sheet(datosColeccion);
         const wb = XLSX.utils.book_new();
         
-        ws['!cols'] = [{ wch: 25 }, { wch: 15 }, { wch: 25 }, { wch: 50 }];
+        ws['!cols'] = [{ wch: 25 }, { wch: 15 }, { wch: 25 }, { wch: 15 }, { wch: 25 }, { wch: 50 }];
         ws['!rows'] = [{ hpx: 25 }];
 
         XLSX.utils.book_append_sheet(wb, ws, 'Hoja1');
