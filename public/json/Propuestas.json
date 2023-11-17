@@ -19,13 +19,7 @@
   },
   {
     "id": 4,
-    "img": "icons/handshake-solid.svg",
-    "title": "LIBERTAD DE EXPRESIÓN",
-    "info": "NO TE CALLES. En los últimos tiempos se han ejercitado una pluralidad de acciones legales cuyo objetivo principal es silenciar voces críticas, lo cual es inaceptable en un país libre. Protegeremos desde la Asamblea el derecho ciudadano a ejercer su libertad de pensamiento y de expresión."
-  },
-  {
-    "id": 5,
-    "img": "icons/handshake-solid.svg",
+    "img": "icons/people-group.svg",
     "title": "LIBERTAD DE EXPRESIÓN",
     "info": "NO TE CALLES. En los últimos tiempos se han ejercitado una pluralidad de acciones legales cuyo objetivo principal es silenciar voces críticas, lo cual es inaceptable en un país libre. Protegeremos desde la Asamblea el derecho ciudadano a ejercer su libertad de pensamiento y de expresión."
   }

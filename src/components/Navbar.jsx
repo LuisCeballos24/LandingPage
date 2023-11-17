@@ -12,10 +12,10 @@ export function Navbar() {
     <div className="navbar">
         <HashLink smooth="true"className="navbar-logo" to="#banner" data-aos="fade-right" data-aos-duration="1000">Daniel Lombana</HashLink>
         <div className="navbar-links">
-            <HashLink smooth="true"className="navbar-link" to="#acercaDeMi">Acerca de mi</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#acercaDeMi">Perfil</HashLink>
             <HashLink smooth="true"className="navbar-link" to="#propuestas">Propuestas</HashLink>
-            <HashLink smooth="true"className="navbar-link" to="#media">Media</HashLink>
-            <HashLink smooth="true"className="navbar-link" to="#suscribete">Contacto</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#media">Medios</HashLink>
+            <HashLink smooth="true"className="navbar-link" to="#suscribete">Súmate</HashLink>
         </div>
         <Hambuerguesa />
     </div>

@@ -58,7 +58,7 @@ export function Media() {
   return (
     // Media
     <div className="media" id="media">
-        <h2 data-aos="fade-down" data-aos-duration="1000">Media</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000">Medios</h2>
         <div className="medias">
             {fotos}
         </div>

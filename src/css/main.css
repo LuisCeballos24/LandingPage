@@ -167,19 +167,27 @@ body {
 
 /* Acerca de Mí */
 .acercaDeMi{
-    width: 100%;
-    color: black;
-    background-color: var(--colorRosadoSuave);
-    padding: 12vh 0;
+    width: 90%;
+    color: white;
+    background-image: url('/img/fondos/fondo_banner.jpg');
+    padding: 12vh 5%;
     display: flex;
-    justify-content: center;
-    align-items: top;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.5rem;
-    gap: 50px;
 }
 .acercaDeMi h2{
     text-align: center;
     font-size: 3rem;
+    color: white;
+    padding-bottom: 50px;
+}
+.acercaDeMi p{
+    font-size: 1.5rem;
+    color: white;
+    width: 85%;
+    text-align: justify;
+    font-size: 1.4rem;
 }
 
 /*  Propuestas  */
@@ -193,15 +201,12 @@ body {
     text-align: center;
     font-size: 3rem;
 }
-.propuestas p, .acercaDeMi p{
+.propuestas p{
     width: 80%;
     margin: 1.5% auto;
     text-align: justify;
     color: #6C757D;
     font-size: 1.4rem;
-}
-.acercaDeMi p{
-    color: black;
 }
 .propuestas .cards {
     padding: 5vh 0 10vh 0;
@@ -249,13 +254,14 @@ body {
 .media{
     width: 100%;
     color: black;
-    background-color: var(--colorRosadoSuave);
+    background-image: url('/img/fondos/fondo_banner.jpg');
     padding: 12vh 0;
     font-size: 1.5rem;
 }
 .media h2{
     text-align: center;
     font-size: 3rem;
+    color: white;
 }
 .medias{
     width: 90%;
@@ -309,7 +315,7 @@ body {
     font-size: 3rem;
 }
 .infoSuscribete{
-    width: 60%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -328,9 +334,13 @@ body {
 .infoSuscribete label, label input, textarea{
     width: 100%;
     margin: .5% 0;
-    border-radius: 2px;
-    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: 1.1rem;
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+}
+.requerido{
+    color: red;
 }
 input[type='submit']{
     font-size: 1.3rem;
@@ -480,6 +490,12 @@ input[type='submit']{
         max-width: 450px;
         height: 450px;
     }
+    .acercaDeMi{
+        width: 90%;
+        color: black;
+        background-color: var(--colorRosadoSuave);
+        padding: 10vh 5% 18vh;
+    }
 }
 
 @media only screen and (max-width: 1250px) {
@@ -575,6 +591,15 @@ input[type='submit']{
     }
     #slideBurger{
         width: 45%;
+    }
+    
+    .acercaDeMi p{
+        font-size: 1.5rem;
+        color: white;
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+        font-size: 1.4rem;
     }
 }
 

@@ -8,24 +8,24 @@
       },
       {
         "id": 2,
-        "img": "icons/instagram.png",
-        "title": "Instagram",
-        "account": "Daniel Lombana",
-        "url": "https://www.instagram.com/dlombana2024/"
+        "img": "icons/Twitter.webp",
+        "title": "Twitter",
+        "account": "@dlombana2024",
+        "url": "https://twitter.com/dlombana2024"
       },
       {
         "id": 3,
-        "img": "icons/Facebook.webp",
-        "title": "Facebook",
-        "account": "Daniel Lombana",
-        "url": "https://www.facebook.com/dlombanamusic/"
+        "img": "icons/TikTok.webp",
+        "title": "TikTok",
+        "account": "@dlombana2024",
+        "url": "https://www.tiktok.com/@dlombana2024"
       },
       {
         "id": 4,
-        "img": "icons/linkedin.png",
-        "title": "LinkedIn",
-        "account": "Daniel Lombana",
-        "url": "https://www.linkedin.com/in/daniel-arturo-lombana-franceschi-321b07122/"
+        "img": "icons/instagram.png",
+        "title": "Instagram",
+        "account": "@dlombana2024",
+        "url": "https://www.instagram.com/dlombana2024/"
       }
   ]
   
