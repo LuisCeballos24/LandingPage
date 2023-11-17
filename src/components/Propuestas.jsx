@@ -12,6 +12,25 @@ export function Propuestas() {
         .catch((error) => console.error('Error al cargar el JSON:', error));
     }, []);
 
+    const colocarAnimacion = (id) => {
+        switch (id) {
+          case 1:
+          case 4:
+          case 7:
+            return 'flip-right';
+          case 2:
+          case 5:
+          case 8:
+            return 'flip-up';
+          case 3:
+          case 6:
+          case 9:
+            return 'flip-left';
+        }
+
+        return 'flip-up'
+      };
+
     if (jsonPropuestas === null) {
         return <div>Cargando...</div>;
       }
@@ -19,7 +38,7 @@ export function Propuestas() {
       // Realizar map solo si los datos están disponibles
       const propuestas = jsonPropuestas.map((item) => (
           // Renderiza tus elementos aquí
-            <div className="card" key={'propuesta'+item.id} data-aos={ item.id == 1 ? "flip-right" : item.id == 2 ? "flip-up" : "flip-left"} data-aos-duration="1500">
+            <div className="card" key={'propuesta'+item.id} data-aos={ colocarAnimacion(item.id) } data-aos-duration="1500">
                 <section>
                     <img src={'/img/' + item.img} alt="" />
                 </section>
