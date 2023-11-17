@@ -4,12 +4,9 @@ import { db } from '../utils/firebase'; // Ajusta la ruta según sea necesario
 import { HashLink } from 'react-router-hash-link';
 
 export function Suscribete() {
-  const [alertMessage, setAlertMessage] = useState('');
-  const [alertType, setAlertType] = useState('');
-  const [jsonRedesSociales, setJsonRedesSociales] = useState(null);
-  const alerta = document.getElementById("alerta")
   const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(null);
+  const [jsonRedesSociales, setJsonRedesSociales] = useState(null);
 
   useEffect(() => {
       // Cargar el archivo JSON utilizando una solicitud HTTP (fetch)
@@ -19,30 +16,34 @@ export function Suscribete() {
       .catch((error) => console.error('Error al cargar el JSON:', error));
   }, []);
 
-  const showAlert = (message, type) => {
-    setAlertMessage(message);
-    setAlertType(type);
-    setTimeout(() => {
-      setAlertMessage('');
-      setAlertType('');
-    }, 6000);
-  };
-
   const onSubmit = async (data) => {
+    const alerta = document.getElementById("alerta")
     try {
       // Almacena en la base de datos de Firebase
       await db.collection('users').add({
         ...data,
-      });
-
-      showAlert('¡¡Excelente!! Muchas gracias por darnos su confianza!', 'success');
+      }).then(res => {
+        alerta.innerHTML = "<strong>¡¡Excelente!!</strong> <br/> Muchas gracias por darnos su confianza!"
+        alerta.classList.add("alertaSuccess");
+        console.log(res);
+      }).catch(err => {
+        alerta.innerHTML = `<strong>Opss, ha ocurrido un Error</strong> <br/> Disculpe, utilice esta funcionalidad más tarde.`
+        alerta.classList.add("alertaError");
+      }).finally(() => {
+        alerta.classList.add("mostrarAlerta");
+        alerta.style.display = "block";
+        setTimeout(() => {
+          alerta.classList.remove("mostrarAlerta", "alertaSuccess")
+          alerta.style.display = "none";
+        }, 6000);
+      })
 
       // Limpiar el formulario después del éxito
       reset();
       setError(null);
     } catch (error) {
       console.error('Error:', error.message);
-      showAlert('Opss, ha ocurrido un Error. Disculpe, utilice esta funcionalidad más tarde.', 'error');
+      setError(error.message);
     }
   };
 
@@ -50,6 +51,7 @@ export function Suscribete() {
   if (jsonRedesSociales === null) {
     return <div>Cargando...</div>;
   }
+
 
   // Realizar map solo si los datos están disponibles
   const redesSociales = jsonRedesSociales.map((item, index) => (
@@ -64,7 +66,7 @@ export function Suscribete() {
 
   return (
     <div className="suscribete" id="suscribete">
-      <div id="alerta">¡¡Excelente!! <br/> Muchas gracias por darnos su confianza!</div>
+      <div id="alerta">Sii</div>
       <h2 data-aos="fade-down" data-aos-duration="1000">
         Súmate
       </h2>
@@ -74,7 +76,7 @@ export function Suscribete() {
           <section>
             <label htmlFor="name">
               Nombre <span className='requerido'>*</span><br />
-              <input type="text" {...register('name')} placeholder="Su Nombre" required={true}/>
+              <input type="text" {...register('name')} placeholder="Su Nombre"/>
             </label>
             <label htmlFor="secondName">
               Segundo Nombre<br />
@@ -82,21 +84,21 @@ export function Suscribete() {
             </label>
             <label htmlFor="lastName">
               Apellido <span className='requerido'>*</span><br />
-              <input type="text" {...register('lastName')} placeholder="Su Apellido" required={true}/>
+              <input type="text" {...register('lastName')} placeholder="Su Apellido"/>
             </label>
           </section>
           <section>
             <label htmlFor="secondLastName">
               Segundo Apellido <span className='requerido'>*</span><br />
-              <input type="text" {...register('secondLastName')} placeholder="Su segundo Apellido" required={true}/>
+              <input type="text" {...register('secondLastName')} placeholder="Su segundo Apellido"/>
             </label>
             <label htmlFor="email">
               Correo <span className='requerido'>*</span><br />
-              <input type="email" {...register('email')} placeholder="suemail@gmail.com" required={true}/>
+              <input type="email" {...register('email')} placeholder="suemail@gmail.com"/>
             </label>
             <label htmlFor="number">
               Teléfono <span className='requerido'>*</span><br />
-              <input type="text" {...register('number')} placeholder="+507 0000-0000" required={true}/>
+              <input type="text" {...register('number')} placeholder="+507 0000-0000"/>
             </label>
           </section>
           <label htmlFor="mensaje">
