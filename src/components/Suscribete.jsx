@@ -107,7 +107,7 @@ export function Suscribete() {
           </label>
           <input type="submit" value="Enviar" />
         </form>
-        <section data-aos="zoom-in-left" data-aos-duration="1000">
+        <section data-aos="zoom-in-down" data-aos-duration="1000">
           <h3>Sígueme en mis Redes Sociales</h3>
           <div className="social">
             <div className="divSocial">

@@ -515,6 +515,9 @@ input[type='submit']{
         align-items: center;
         gap: 40px;
     }
+    .cards{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 1170px) {
@@ -573,6 +576,7 @@ input[type='submit']{
         max-width: 80%;
         margin: 0%;
         text-align: center;
+        padding-left: 0%;
     }
     .banner-image{
         margin-top: -5%;
