@@ -52,7 +52,7 @@ export function Propuestas() {
     <div className="propuestas" id="propuestas">
         <h2 data-aos="fade-down" data-aos-duration="1000">Propuestas</h2>
         <p>
-            Nuestra visión en el corto plazo busca establecer claridad en los objetivos nacionales para abordar temas cruciales como el costo de la vida, el desempleo, la inseguridad, la salud, la minería, los ingresos tributarios, la migración, la gestión de residuos, la inversión nacional y extranjera, la gestión medio ambiental, el sistema de justicia, la institucionalidad, el turismo, entre otros.
+            Nuestra visión en el corto plazo busca establecer claridad en los objetivos nacionales para abordar temas cruciales como el costo de la vida, el desempleo, la inseguridad, la salud, los ingresos tributarios, la migración, la gestión de residuos, la inversión nacional y extranjera, la gestión medio ambiental, el sistema de justicia, la institucionalidad, el turismo, entre otros.
         </p>
         <div className="cards">
             { propuestas }
